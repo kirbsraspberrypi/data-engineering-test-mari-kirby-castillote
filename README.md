@@ -55,6 +55,8 @@ data-engineering-test-mari-kirby-castillote/
 └── README.md           # Documentation for the project.
 ```
 
+---
+
 # Setup and Usage
 
 ## 1. Environment Setup
@@ -117,6 +119,8 @@ Run the unit tests to validate the pipeline:
 pytest
 ```
 
+---
+
 # Implementation Details
 
 ## 1. Design Decisions
@@ -170,6 +174,8 @@ pytest
 
 - Verifies the correctness of data processing and transformations.
 - Ensures data outputs match expected results.
+
+---
 
 ## References
 
