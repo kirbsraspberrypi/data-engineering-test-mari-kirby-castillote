@@ -92,7 +92,7 @@ pip3 install -r requirements.txt
 
 ## 2. Running the Pipeline
 
-- Place the raw input file `scraped_data.csv` in the `static/input` directory.
+- Place the raw input file `scraped_data.csv` in the `static/input` directory. You can find the [scraped_data.csv](https://www.kaggle.com/datasets/sukhmandeepsinghbrar/total-worldwide-passenger-cars-sales) here.
 - Execute the pipeline:
 
 ```
