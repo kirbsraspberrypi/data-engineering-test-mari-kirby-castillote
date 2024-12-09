@@ -5,12 +5,14 @@ import logging
 import sqlite3
 import pandas as pd
 from pathlib import Path
-from libs.dataapi import DataProcessor
-from libs.savefileapi import FileSaver
 
 # Add the project base directory to sys.path
 BASE_DIR = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(BASE_DIR))
+LIBS_DIR = BASE_DIR / 'libs'
+sys.path.insert(0, str(LIBS_DIR))
+
+from dataapi import DataProcessor
+from savefileapi import FileSaver
 
 # Setup test directories
 TEST_DIR = BASE_DIR / 'tests'
@@ -24,7 +26,6 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 # Logger mock for testing
-import logging
 logger = logging.getLogger(__name__)
 
 @pytest.fixture
@@ -56,7 +57,7 @@ def test_empty_dataset(processor):
 def test_missing_columns(processor, mock_data):
     """Test behavior when columns are missing."""
     mock_data.drop(columns=['Country'], inplace=True)
-    with pytest.raises(KeyError):
+    with pytest.raises(KeyError, match="Missing required column: Country"):
         processor.sanitize_data(mock_data)
 
 def test_incorrect_data_types(processor, mock_data):
