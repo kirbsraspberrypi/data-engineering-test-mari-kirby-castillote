@@ -178,7 +178,7 @@ pytest
 
 ---
 
-## References
+## Reference
 
 - [Sample Data: Total Worldwide Passenger Cars Sales](https://www.kaggle.com/datasets/sukhmandeepsinghbrar/total-worldwide-passenger-cars-sales)
 
