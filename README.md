@@ -62,6 +62,7 @@ data-engineering-test-mari-kirby-castillote/
 ## 1. Environment Setup
 
 ### Clone the repository:
+
 ```
 git clone https://github.com/kirbsraspberrypi/data-engineering-test-mari-kirby-castillote.git
 cd data-engineering-test-mari-kirby-castillote/
