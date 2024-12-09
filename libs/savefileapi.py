@@ -1,6 +1,7 @@
-import sqlite3
 import logging
+import sqlite3
 import pandas as pd
+
 
 class FileSaver:
     """Class to handle saving data to files."""
